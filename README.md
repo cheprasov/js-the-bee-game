@@ -18,7 +18,7 @@ Alexander Cheprasov
 - More browsers for test. I have tested the game only on Chrome, Firefox and Safari.
 
 ## How to build
-I have done build for you. I need just play.
+I have done build for you. You need just play.
 But, if you want to rebuild it, please, do next:
 ```
 > npm install

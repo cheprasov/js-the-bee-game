@@ -8,19 +8,24 @@ export default class EventManager {
      * @return {Function}
      */
     static getRequestAnimFrame() {
+        if (EventManager.requestAnimFrame) {
+            return EventManager.requestAnimFrame;
+        }
         if (!window) {
-            return function(callback) {
+            EventManager.requestAnimFrame = function(callback) {
                 setTimeout(callback, 1000 / 60);
             };
+        } else {
+            EventManager.requestAnimFrame = window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
         }
-        return window.requestAnimationFrame    ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            window.oRequestAnimationFrame      ||
-            window.msRequestAnimationFrame     ||
-            function(callback) {
-                window.setTimeout(callback, 1000 / 60);
-            };
+        return EventManager.requestAnimFrame;
     }
 
     /**
