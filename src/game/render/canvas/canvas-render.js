@@ -89,7 +89,7 @@ export default class CanvasRender extends RenderInterface {
                 stop = false;
                 for (let i = 0; i < this.renderElements.length; i += 1) {
                     if (this._renderElement(time, this.renderElements[i])) {
-                        this.renderElements.splice(i, 1);
+                        this.renderElements.splice(i--, 1);
                     }
                 }
             }
