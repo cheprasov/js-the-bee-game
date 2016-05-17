@@ -100,6 +100,7 @@ export default class ImageClass {
         } else {
             context.drawImage(this.image, 0, 0, this.width, this.height, -this.width / 2, -this.height / 2, this.width, this.height);
         }
+        return true;
     }
 
 }

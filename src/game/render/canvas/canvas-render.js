@@ -105,8 +105,9 @@ export default class CanvasRender extends RenderInterface {
     _renderElement(time, element) {
         this.context.save();
         this.context.translate(element.position.x, element.position.y);
-        element.image.render(this.context, time);
+        let result = element.image.render(this.context, time);
         this.context.restore();
+        return !result;
     }
 
     /**
