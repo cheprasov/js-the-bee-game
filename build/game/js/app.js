@@ -1875,13 +1875,14 @@ var ImageClass = function () {
         /**
          * @param {CanvasRenderingContext2D} context
          * @param {float} time
+         * @return {boolean}
          */
 
     }, {
         key: "render",
         value: function render(context, time) {
             if (!this.image) {
-                return false;
+                return true;
             }
             if (this.loop <= 0) {
                 return false;

@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         concat: {
             css: {
                 files: {
-                    'build/game/css/style.css': ['files/**/*.css']
+                    'build/game/css/style.css': ['files/css/**/*.css']
                 }
             }
         },

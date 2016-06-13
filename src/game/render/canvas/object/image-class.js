@@ -71,10 +71,11 @@ export default class ImageClass {
     /**
      * @param {CanvasRenderingContext2D} context
      * @param {float} time
+     * @return {boolean}
      */
     render(context, time) {
         if (!this.image) {
-            return false;
+            return true;
         }
         if (this.loop <= 0) {
             return false;
