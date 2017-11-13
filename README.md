@@ -3,6 +3,9 @@
 ## About
 The game based on a small exercise (please, see bee_game_frontend.pdf) special for W3.
 
+## Demo
+http://the-bee-game.cheprasov.com/
+
 ## About me
 
 Alexander Cheprasov
